@@ -2,6 +2,7 @@
 
 This Python script processes images to detect fog and extract date/time information using a combination of machine learning and optical character recognition (OCR) techniques.
 
+The images used in this project were all captured using two infrared cameras, either a FLIR Systems Inc. A655sc or a FLIR Systems Inc. A65sc, from Met Office.
 ## Features
 
 - Fog detection using a custom CNN model (FogNet)
@@ -31,7 +32,7 @@ Ensure you have the trained FogNet model file (.pth) ready.
 
 Run the script:
 ```bash
-python fog_detection_script.py
+python fog_script.py
 ```
 
 When prompted, enter:
@@ -54,7 +55,7 @@ Fog prediction: [Fog/No Fog]
 
 ## Notes
 
-The script is set up to process images with date/time information in a specific location (coordinates 312,514 to 417,534). Adjust these coordinates in the script if your images have a different layout.
+The script is set up to process images with date/time information in a specific location (coordinates 312,514 to 417,534 or 292,485 to 440,500). Adjust these coordinates in the script if your images have a different layout.
 The fog detection model (FogNet) should be trained separately. This script assumes you have a trained model file.
 The script uses CPU by default. For faster processing, ensure you have CUDA set up if you're using a NVIDIA GPU.
 
