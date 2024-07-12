@@ -32,7 +32,7 @@ Ensure you have the trained FogNet model file (.pth) ready.
 
 Run the script:
 ```bash
-python fog_script.py
+python fog_script_0712.py
 ```
 
 When prompted, enter:
