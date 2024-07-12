@@ -31,7 +31,7 @@ Ensure you have the trained FogNet model file (.pth) ready.
 
 Run the script:
 ```bash
-python fog_detection_script.py
+python fog_script.py
 ```
 
 When prompted, enter:
