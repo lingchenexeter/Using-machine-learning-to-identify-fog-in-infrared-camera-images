@@ -139,8 +139,17 @@ def main():
             # Read image for OCR
             image = cv2.imread(image_path)
             
-            # Crop image for OCR
-            x1, y1, x2, y2 = 291, 485, 437, 534
+            # Check image size and set crop coordinates
+            height, width = image.shape[:2]
+            if height == 534 and width == 768:
+                x1, y1, x2, y2 = 312, 514, 417, 534
+            elif height == 502 and width == 728:
+                x1, y1, x2, y2 = 292, 485, 440, 500
+            else:
+                print(f"Warning: Unexpected image size for {filename}: {width}x{height}")
+                continue  # Skip images with unexpected sizes
+            
+            # Crop image
             cropped_image = image[y1:y2, x1:x2]
             
             # Perform OCR
